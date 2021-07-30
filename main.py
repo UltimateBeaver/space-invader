@@ -36,10 +36,10 @@ enemyY_delta = 40
 
 bulletImg = pygame.image.load('bullet1.png')
 bulletX = 0
-bulletY = 480
+bulletY = 0
 bulletX_delta = 0
 bulletY_delta = 5
-bullet_state = "ready "
+bullet_state = "ready"
 
 
 
@@ -96,6 +96,7 @@ while running:
                 if bullet_state is "ready":
                     # Get the Current X Coordinate of the Spaceship
                     bulletX = playerX
+                    bulletY = playerY
                     fire_bullet(bulletX, bulletY)
 
 
